@@ -1,4 +1,5 @@
 package ch2_movie;
 
-public class DiscountCondition {
+public interface DiscountCondition {
+    boolean isSatisfiedBy(Screening screening);
 }
