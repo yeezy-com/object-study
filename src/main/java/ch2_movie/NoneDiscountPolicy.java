@@ -1,14 +1,10 @@
 package ch2_movie;
 
-public class NoneDiscountPolicy implements DiscountPolicy {
-    @Override
-    public Money calculateDiscountAmount(Screening screening) {
+public class NoneDiscountPolicy extends DefaultDiscountPolicy {
+        @Override
+    protected Money getDiscountAmount(Screening screening) {
         return Money.ZERO;
     }
-    //    @Override
-//    protected Money getDiscountAmount(Screening screening) {
-//        return Money.ZERO;
-//    }
 
     /*
     Movie starWars = new Movie("스타워즈",
